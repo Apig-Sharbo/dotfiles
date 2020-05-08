@@ -24,7 +24,7 @@ call plug#begin('~/local/share/nvim/plugged')
 	" Plug 'ap/vim-css-color'		" CSS colors
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }	" CSS colors
     Plug 'morhetz/gruvbox'
-	Plug 'jremmen/vim-ripgrep'
+	" Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
