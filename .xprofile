@@ -1,0 +1,9 @@
+slstatus &
+picom &
+dunst &
+xwallpaper --center ~/.config/wallpaper/sunsetRocket.png
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORMTHEME="qt5ct"
+
+/* export QT_STYLE_OVERRIDE=kvantum */
+/* XDG_CURRENT_DESKTOP=KDE */

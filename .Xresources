@@ -1,0 +1,237 @@
+!! Transparency (0-1):
+/* st.alpha: 0.92 */
+
+!! Set a default font and font size as below:
+/* st.font: Monospace-11; */
+
+/* st.termname: st-256color */
+st.borderpx: 3
+
+/* Default st theme */
+/* st.color0:  black */
+/* st.color8:  #7f7f7f /1* gray50 *1/ */
+/* st.color1:  #cd0000 /1* red3 *1/ */
+/* st.color9:  red */
+/* st.color2:  #00cd00 /1* green3 *1/ */
+/* st.color10: green */
+/* st.color3:  #cdcd00 /1* yellow3 *1/ */
+/* st.color11: yellow */
+/* st.color4:  #0000ee /1* blue2 *1/ */
+/* st.color12: #5c5cff */
+/* st.color5:  #cd00cd /1* magenta3 *1/ */
+/* st.color13: magenta */
+/* st.color6:  #00cdcd /1* cyan3 *1/ */
+/* st.color14: cyan */
+/* st.color7:  #e5e5e5 /1* gray90 *1/ */
+/* st.color15: white */
+/* st.background: black */
+/* st.foreground: #e5e5e5 */
+/* st.cursorColor: #cccccc */
+/* st.rcursorColor: #555555 */
+
+/* !! gruvbox: */
+/* st.color0:  #1d2021 */
+/* st.color8:  #928374 */
+/* st.color1:  #cc241d */
+/* st.color9:  #fb4934 */
+/* st.color2:  #98971a */
+/* st.color10: #b8bb26 */
+/* st.color3:  #d79921 */
+/* st.color11: #fabd2f */
+/* st.color4:  #458588 */
+/* st.color12: #83a598 */
+/* st.color5:  #b16286 */
+/* st.color13: #d3869b */
+/* st.color6:  #689d6a */
+/* st.color14: #8ec07c */
+/* st.color7:  #a89984 */
+/* st.color15: #ebdbb2 */
+/* st.background: #1d2021 */
+/* st.foreground: #fdf6e3 */
+/* st.cursorColor:#ebdbb2 */
+/* st.rcursorColor: #add8e6 */
+
+/* ========================================= */
+/* #define nord0 #2E3440 */
+/* #define nord1 #3B4252 */
+/* #define nord2 #434C5E */
+/* #define nord3 #4C566A */
+/* #define nord4 #D8DEE9 */
+/* #define nord5 #E5E9F0 */
+/* #define nord6 #ECEFF4 */
+/* #define nord7 #8FBCBB */
+/* #define nord8 #88C0D0 */
+/* #define nord9 #81A1C1 */
+/* #define nord10 #5E81AC */
+/* #define nord11 #BF616A */
+/* #define nord12 #D08770 */
+/* #define nord13 #EBCB8B */
+/* #define nord14 #A3BE8C */
+/* #define nord15 #B48EAD */
+
+/* *.foreground:   nord4 */
+/* *.background:   nord0 */
+/* *.cursorColor:  nord4 */
+
+/* *.color0: nord1 */
+/* *.color1: nord11 */
+/* *.color2: nord14 */
+/* *.color3: nord13 */
+/* *.color4: nord9 */
+/* *.color5: nord15 */
+/* *.color6: nord8 */
+/* *.color7: nord5 */
+/* *.color8: nord3 */
+/* *.color9: nord11 */
+/* *.color10: nord14 */
+/* *.color11: nord13 */
+/* *.color12: nord9 */
+/* *.color13: nord15 */
+/* *.color14: nord7 */
+/* *.color15: nord6 */
+/* ========================================= */
+! phrak1 // perfect for mc on older servers
+st.foreground:   #a8a8a8
+st.background:   #000000
+st.cursorColor:  #a8a8a8
+st.rcursorColor: #50fcf8
+st.color0:       #000000
+st.color8:       #545054
+st.color1:       #a80000
+st.color9:       #f85450
+st.color2:       #00a800
+st.color10:      #50fc50
+st.color3:       #a85400
+st.color11:      #f8fc50
+st.color4:       #0000a8
+st.color12:      #5054f8
+st.color5:       #a800a8
+st.color13:      #f854f8
+st.color6:       #00a8a8
+st.color14:      #50fcf8
+st.color7:       #a8a8a8
+st.color15:      #f8fcf8
+
+
+!! solarized Luke */
+/* *.color0:	#073642 */
+/* *.color8:	#fdf6e3 */
+/* *.color1:	#dc322f */
+/* *.color9:	#cb4b16 */
+/* *.color2:	#859900 */
+/* *.color10:	#586e75 */
+/* *.color3:	#b58900 */
+/* *.color11:	#657b83 */
+/* *.color4:	#268bd2 */
+/* *.color12:	#839496 */
+/* *.color5:	#d33682 */
+/* *.color13:	#6c71c4 */
+/* *.color6:	#2aa198 */
+/* *.color14:	#93a1a1 */
+/* *.color7:	#eee8d5 */
+/* *.color15:	#fdf6e3 */
+
+! Solarized Dark
+/* st.foreground:   #93a1a1 */
+/* st.background:   #002b36 */
+/* st.cursorColor:  #93a1a1 */
+/* st.color0:       #002b36 */
+/* st.color8:       #657b83 */
+/* st.color1:       #dc322f */
+/* st.color9:       #dc322f */
+/* st.color2:       #859900 */
+/* st.color10:      #859900 */
+/* st.color3:       #b58900 */
+/* st.color11:      #b58900 */
+/* st.color4:       #268bd2 */
+/* st.color12:      #268bd2 */
+/* st.color5:       #6c71c4 */
+/* st.color13:      #6c71c4 */
+/* st.color6:       #2aa198 */
+/* st.color14:      #2aa198 */
+/* st.color7:       #93a1a1 */
+/* st.color15:      #fdf6e3 */
+
+! Tartan
+/* st.foreground:   #dedede */
+/* st.background:   #2b2b2b */
+/* st.cursorColor:  #dedede */
+/* st.color0:       #2e3436 */
+/* st.color8:       #555753 */
+/* st.color1:       #cc0000 */
+/* st.color9:       #ef2929 */
+/* st.color2:       #4e9a06 */
+/* st.color10:      #8ae234 */
+/* st.color3:       #c4a000 */
+/* st.color11:      #fce94f */
+/* st.color4:       #3465a4 */
+/* st.color12:      #729fcf */
+/* st.color5:       #75507b */
+/* st.color13:      #ad7fa8 */
+/* st.color6:       #06989a */
+/* st.color14:      #34e2e2 */
+/* st.color7:       #d3d7cf */
+/* st.color15:      #eeeeec */
+
+! digerati
+/* st.foreground:   #ffffff */
+/* st.background:   #000000 */
+/* st.cursorColor:  #ffffff */
+/* st.color0:       #303030 */
+/* st.color8:       #5f5f5f */
+/* st.color1:       #c03000 */
+/* st.color9:       #ff3a78 */
+/* st.color2:       #b1d631 */
+/* st.color10:      #a6cd07 */
+/* st.color3:       #fecf35 */
+/* st.color11:      #b5c865 */
+/* st.color4:       #426870 */
+/* st.color12:      #4a7781 */
+/* st.color5:       #6d506d */
+/* st.color13:      #ff3b77 */
+/* st.color6:       #4bb5c1 */
+/* st.color14:      #4bb5c1 */
+/* st.color7:       #e2e2e5 */
+/* st.color15:      #e2e2e5 */
+
+! neon
+/* st.foreground:   #f8f8f8 */
+/* st.background:   #171717 */
+/* st.cursorColor:  #f8f8f8 */
+/* st.color0:       #171717 */
+/* st.color8:       #38252c */
+/* st.color1:       #d81765 */
+/* st.color9:       #ff0000 */
+/* st.color2:       #97d01a */
+/* st.color10:      #76b639 */
+/* st.color3:       #ffa800 */
+/* st.color11:      #e1a126 */
+/* st.color4:       #16b1fb */
+/* st.color12:      #289cd5 */
+/* st.color5:       #ff2491 */
+/* st.color13:      #ff2491 */
+/* st.color6:       #0fdcb6 */
+/* st.color14:      #0a9b81 */
+/* st.color7:       #ebebeb */
+/* st.color15:      #f8f8f8 */
+
+! parker brothers
+/* st.foreground:   #ffffff */
+/* st.background:   #000000 */
+/* st.cursorColor:  #ffffff */
+/* st.color0:       #322a2c */
+/* st.color8:       #46423b */
+/* st.color1:       #79220e */
+/* st.color9:       #aa261f */
+/* st.color2:       #344b1b */
+/* st.color10:      #76550f */
+/* st.color3:       #b45b00 */
+/* st.color11:      #b57f02 */
+/* st.color4:       #434045 */
+/* st.color12:      #908862 */
+/* st.color5:       #5c1e25 */
+/* st.color13:      #624a35 */
+/* st.color6:       #394745 */
+/* st.color14:      #393e38 */
+/* st.color7:       #ae8842 */
+/* st.color15:      #a59058 */

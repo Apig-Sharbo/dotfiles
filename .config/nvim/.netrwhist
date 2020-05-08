@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/jargonin/.config/JetBrains/PyCharm2020.1/scratches'
+let g:netrw_dirhist_1='/home/jargonin/.config/JetBrains/PyCharm2020.1'
+let g:netrw_dirhist_0='/home/jargonin/.config/JetBrains'
+let g:netrw_dirhist_9='/home/jargonin/.config'
+let g:netrw_dirhist_8='/home/jargonin'
+let g:netrw_dirhist_7='/home/jargonin/Documents/js_projects/POS/src'
+let g:netrw_dirhist_6='/home/jargonin/Documents/js_projects/POS'
+let g:netrw_dirhist_5='/home/jargonin/st'
+let g:netrw_dirhist_4='/home/jargonin'
+let g:netrw_dirhist_3='/home/jargonin/st'
