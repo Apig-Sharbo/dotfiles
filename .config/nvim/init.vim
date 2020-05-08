@@ -1,9 +1,9 @@
 " My list of plugins
 call plug#begin('~/local/share/nvim/plugged')
 
-    Plug 'ying17zi/vim-live-latex-preview'
+    " Plug 'ying17zi/vim-live-latex-preview'
 	" Plug 'ludovicchabant/vim-gutentags'	" manage Ctags
-    Plug 'ptzz/lf.vim'
+    " Plug 'ptzz/lf.vim'
     Plug 'rbgrouleff/bclose.vim'
 	Plug 'preservim/nerdtree'		" Tree view Folders and Files
 	Plug 'ryanoasis/vim-devicons'
@@ -25,6 +25,7 @@ call plug#begin('~/local/share/nvim/plugged')
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }	" CSS colors
     Plug 'morhetz/gruvbox'
 	Plug 'jremmen/vim-ripgrep'
+    Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -51,6 +52,12 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
+
+" fzf
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-g> :GFiles<CR>
+nnoremap <silent> <C-o> :Buffers<CR>
+nnoremap <C-f> :Rg<Space>
 
 " Shortcutting split navigation
 map <C-h> <C-w>h
@@ -121,6 +128,16 @@ call deoplete#custom#source('ale', 'rank', 999)
 "       \'cpp': ['ale'],
 "       \'sh': ['ale'],
 "       \})
+
+" Rg command with preview window
+command! -bang -nargs=* Rg
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
+      \   fzf#vim#with_preview(), <bang>0)
+
+" Hide statusline with fzf
+autocmd! FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " Close Netrw if it's the only buffer open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
