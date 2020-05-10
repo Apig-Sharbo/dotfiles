@@ -1,0 +1,32 @@
+# The Simple X Hotkey Daemon is the program used by LARBS to map most of the
+# dwm-independent commands.  This file is pretty readable, so I'll let you read
+# it.
+
+# Brightness
+XF86MonBrightnessUp
+    xbacklight -inc 1
+XF86MonBrightnessDown
+    xbacklight -dec 1
+
+# Media control
+XF86AudioNext
+    playerctl next
+XF86AudioPrev
+    playerctl previous
+XF86AudioPlay
+    playerctl play-pause
+
+# Volume control
+XF86AudioRaiseVolume
+    pamixer -i 2
+XF86AudioLowerVolume
+    pamixer -d 2
+XF86AudioMute
+    pamixer -t
+
+
+# Screenshot
+Print
+    maim ~/Pictures/pic-full-\"$(date '+%y%m%d-%H%M-%S').png\"
+shift + Print
+    maimpick
