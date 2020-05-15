@@ -56,7 +56,7 @@ map <silent> <leader><cr> :noh<cr>
 " fzf
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
-nnoremap <silent> <C-o> :Buffers<CR>
+nnoremap <silent> <leader>o :Buffers<CR>
 nnoremap <C-f> :Rg<Space>
 
 " Shortcutting split navigation
