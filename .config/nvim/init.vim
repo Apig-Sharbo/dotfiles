@@ -34,6 +34,9 @@ colorscheme gruvbox
 
 " let mapleader = " "
 
+" Use system clipboard
+set clipboard+=unnamedplus
+
 " LaTex
 syntax on
 filetype plugin indent on
