@@ -91,27 +91,49 @@ st.borderpx: 3
 /* *.color15: nord6 */
 /* ========================================= */
 ! phrak1 // perfect for mc on older servers
-st.foreground:   #a8a8a8
-st.background:   #000000
-st.cursorColor:  #a8a8a8
-st.rcursorColor: #50fcf8
-st.color0:       #000000
-st.color8:       #545054
-st.color1:       #a80000
-st.color9:       #f85450
-st.color2:       #00a800
-st.color10:      #50fc50
-st.color3:       #a85400
-st.color11:      #f8fc50
-st.color4:       #0000a8
-st.color12:      #5054f8
-st.color5:       #a800a8
-st.color13:      #f854f8
-st.color6:       #00a8a8
-st.color14:      #50fcf8
-st.color7:       #a8a8a8
-st.color15:      #f8fcf8
+/* st.foreground:   #a8a8a8 */
+/* st.background:   #000000 */
+/* st.cursorColor:  #a8a8a8 */
+/* st.rcursorColor: #50fcf8 */
+/* st.color0:       #000000 */
+/* st.color8:       #545054 */
+/* st.color1:       #a80000 */
+/* st.color9:       #f85450 */
+/* st.color2:       #00a800 */
+/* st.color10:      #50fc50 */
+/* st.color3:       #a85400 */
+/* st.color11:      #f8fc50 */
+/* st.color4:       #0000a8 */
+/* st.color12:      #5054f8 */
+/* st.color5:       #a800a8 */
+/* st.color13:      #f854f8 */
+/* st.color6:       #00a8a8 */
+/* st.color14:      #50fcf8 */
+/* st.color7:       #a8a8a8 */
+/* st.color15:      #f8fcf8 */
 
+
+! monokai dark
+st.foreground:   #f8f8f2
+st.background:   #272822
+st.cursorColor:  #f8f8f2
+st.rcursorColor: #5054f8
+st.color0:       #272822
+st.color8:       #75715e
+st.color1:       #f92672
+st.color9:       #f92672
+st.color2:       #a6e22e
+st.color10:      #a6e22e
+st.color3:       #f4bf75
+st.color11:      #f4bf75
+st.color4:       #66d9ef
+st.color12:      #66d9ef
+st.color5:       #ae81ff
+st.color13:      #ae81ff
+st.color6:       #a1efe4
+st.color14:      #a1efe4
+st.color7:       #f8f8f2
+st.color15:      #f9f8f5
 
 !! solarized Luke */
 /* *.color0:	#073642 */
