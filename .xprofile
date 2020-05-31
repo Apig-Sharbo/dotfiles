@@ -1,5 +1,5 @@
 slstatus &
-picom &
+/* picom & */
 dunst &
 sxhkd &
 xwallpaper --center ~/.config/wallpaper/sunsetRocket.png
