@@ -23,8 +23,9 @@ call plug#begin('~/local/share/nvim/plugged')
 	Plug 'unblevable/quick-scope'		" Vim motion highlighting
 	" Plug 'ap/vim-css-color'		" CSS colors
 	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }	" CSS colors
-    Plug 'morhetz/gruvbox'
-	" Plug 'jremmen/vim-ripgrep'
+    " Plug 'morhetz/gruvbox'
+    Plug 'gruvbox-community/gruvbox'
+    " Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf.vim'
 
 " Initialize plugin system
