@@ -66,4 +66,5 @@ fi
 # }
 
 # exec $(get_session)
+# exec startkde
 exec dwm
