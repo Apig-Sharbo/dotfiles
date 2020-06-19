@@ -27,6 +27,10 @@ call plug#begin('~/local/share/nvim/plugged')
     Plug 'gruvbox-community/gruvbox'
     " Plug 'jremmen/vim-ripgrep'
     Plug 'junegunn/fzf.vim'
+    Plug 'hashicorp/terraform'
+    Plug 'wata727/tflint'
+    Plug 'juliosueiras/terraform-lsp'
+    Plug 'hashivim/vim-terraform'
 
 " Initialize plugin system
 call plug#end()
@@ -108,16 +112,21 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 let g:deoplete#enable_at_startup = 1
 
+let g:terraform_align=1
+let g:terraform_fmt_on_save=1
+
 " set omnifunc=ale#completion#OmniFunc
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-\   	'*': ['remove_trailing_lines', 'trim_whitespace'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  	'python': ['black'],
+\   'terraform': ['terraform'],
 \}
 
 let g:ale_linters = {
 \	'python': ['flake8'],
 \   'latex':['texlab'],
+\   'terraform': ['tflint'],
 \}
 
 call deoplete#custom#source('ale', 'rank', 999)
@@ -164,11 +173,12 @@ autocmd BufWritePost ~/dwmblocks/blocks.h !sudo make -C ~/dwmblocks clean instal
 " Compile slock
 autocmd BufWritePost ~/slock/config.h !sudo make -C ~/slock clean install
 
+" Compile LateX in the current directory of the terminal
+autocmd BufWritePost *.tex !pdflatex %
+
 " Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
-" Recompile LateX in the current directory of the terminal
-autocmd BufWritePost *.tex !pdflatex %
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType Vagrantfile setlocal ts=2 sts=2 sw=2 expandtab
