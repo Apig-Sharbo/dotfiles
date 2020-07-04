@@ -38,7 +38,7 @@ window:
    y: 2
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+  # dynamic_padding: true
 
   # Window decorations
   #
@@ -170,36 +170,34 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night Bright)
-
-
 colors:
   # Default colors
   primary:
-    background: '0x272822'
-    foreground: '0xf8f8f2'
+    background: '0x111119'
+    foreground: '0xc5c8c6'
 
   # Normal colors
   normal:
-    black:   '0x272822'
-    red:     '0xf92672'
-    green:   '0xa6e22e'
-    yellow:  '0xf4bf75'
-    blue:    '0x66d9ef'
-    magenta: '0xae81ff'
-    cyan:    '0xa1efe4'
-    white:   '0xf8f8f2'
+    black:   '0x111119'
+    red:     '0xe60048'
+    green:   '0x6fe600'
+    yellow:  '0xe69500'
+    blue:    '0x0050e6'
+    magenta: '0xb400e6'
+    cyan:    '0x00e6c7'
+    white:   '0xc5c8c6'
 
   # Bright colors
   bright:
-    black:   '0x75715e'
-    red:     '0xf92672'
-    green:   '0xa6e22e'
-    yellow:  '0xf4bf75'
-    blue:    '0x66d9ef'
-    magenta: '0xae81ff'
-    cyan:    '0xa1efe4'
-    white:   '0xf9f8f5'
+    black:   '0x43434d'
+    red:     '0xff0000'
+    green:   '0x7bff00'
+    yellow:  '0xffa600'
+    blue:    '0x0084ff'
+    magenta: '0xc800ff'
+    cyan:    '0x00ffdd'
+    white:   '0xffffff'
+
 
 #colors:
   # Default colors
@@ -535,10 +533,10 @@ key_bindings:
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
   #- { key: Insert,   mods: Shift,         action: PasteSelection   }
-  #- { key: Key0,     mods: Control,       action: ResetFontSize    }
-  #- { key: Equals,   mods: Control,       action: IncreaseFontSize }
+  - { key: Key0,     mods: Control,       action: ResetFontSize    }
+  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
   #- { key: Add,      mods: Control,       action: IncreaseFontSize }
-  #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
+  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
   #- { key: Minus,    mods: Control,       action: DecreaseFontSize }
   - { key: Return,    mods: Control|Shift, action: SpawnNewInstance }
 
