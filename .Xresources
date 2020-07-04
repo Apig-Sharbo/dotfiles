@@ -29,6 +29,29 @@ st.borderpx: 3
 /* st.cursorColor: #cccccc */
 /* st.rcursorColor: #555555 */
 
+ /* My personalized theme */
+! special
+st.foreground:   #c5c8c6
+st.background:   #111119
+st.cursorColor:  #c5c8c6
+st.color0:       #111119
+st.color8:       #43434d
+st.color1:       #e60048
+st.color9:       #ff0000
+st.color2:       #6fe600
+st.color10:      #7bff00
+st.color3:       #e69500
+st.color11:      #ffa600
+st.color4:       #0050e6
+st.color12:      #0084ff
+st.color5:       #b400e6
+st.color13:      #c800ff
+st.color6:       #00e6c7
+st.color14:      #00ffdd
+st.color7:       #c5c8c6
+st.color15:      #ffffff
+
+
 /* !! gruvbox: */
 /* st.color0:  #1d2021 */
 /* st.color8:  #928374 */
@@ -114,26 +137,26 @@ st.borderpx: 3
 
 
 ! monokai dark
-st.foreground:   #f8f8f2
-st.background:   #272822
-st.cursorColor:  #f8f8f2
-st.rcursorColor: #5054f8
-st.color0:       #272822
-st.color8:       #75715e
-st.color1:       #f92672
-st.color9:       #f92672
-st.color2:       #a6e22e
-st.color10:      #a6e22e
-st.color3:       #f4bf75
-st.color11:      #f4bf75
-st.color4:       #66d9ef
-st.color12:      #66d9ef
-st.color5:       #ae81ff
-st.color13:      #ae81ff
-st.color6:       #a1efe4
-st.color14:      #a1efe4
-st.color7:       #f8f8f2
-st.color15:      #f9f8f5
+/* st.foreground:   #f8f8f2 */
+/* st.background:   #272822 */
+/* st.cursorColor:  #f8f8f2 */
+/* st.rcursorColor: #5054f8 */
+/* st.color0:       #272822 */
+/* st.color8:       #75715e */
+/* st.color1:       #f92672 */
+/* st.color9:       #f92672 */
+/* st.color2:       #a6e22e */
+/* st.color10:      #a6e22e */
+/* st.color3:       #f4bf75 */
+/* st.color11:      #f4bf75 */
+/* st.color4:       #66d9ef */
+/* st.color12:      #66d9ef */
+/* st.color5:       #ae81ff */
+/* st.color13:      #ae81ff */
+/* st.color6:       #a1efe4 */
+/* st.color14:      #a1efe4 */
+/* st.color7:       #f8f8f2 */
+/* st.color15:      #f9f8f5 */
 
 !! solarized Luke */
 /* *.color0:	#073642 */
