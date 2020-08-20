@@ -105,7 +105,14 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias mpv='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv'
 
 mpv-yt(){
-    __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv --ytdl-format="bestvideo[height=?$1][fps<=?60]+bestaudio" "$2";
+    case $1 in
+      hd)  w=1280 ;;
+      fhd) w=1920 ;;
+      qhd) w=2560 ;;
+      4k)  w=3840 ;;
+      8k)  w=7680 ;;
+    esac
+    __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2";
 }
 
 xhost +local:root > /dev/null 2>&1
