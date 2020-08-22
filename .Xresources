@@ -1,3 +1,8 @@
+/* sxiv */
+Sxiv.background: #53535d
+Sxiv.foreground: #000000
+
+
 !! Transparency (0-1):
 /* st.alpha: 0.92 */
 
