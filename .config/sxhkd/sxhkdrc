@@ -27,6 +27,6 @@ XF86AudioMute
 
 # Screenshot
 Print
-    maim ~/Pictures/pic-full-\"$(date '+%y%m%d-%H%M-%S').png\"
+    maim ~/Pictures/pic-full-"$(date '+%y%m%d-%H%M-%S').png"
 shift + Print
     maimpick
