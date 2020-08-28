@@ -103,6 +103,7 @@ alias la='exa -aF --group-directories-first'
 alias ll='exa -aFgl --group-directories-first'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias mpv='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv'
+alias fast-mirrors='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
 
 mpv-yt(){
     case $1 in
