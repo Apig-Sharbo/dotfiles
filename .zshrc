@@ -68,6 +68,8 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 setopt COMPLETE_ALIASES
 
+# make bash Alt+. work
+bindkey -M viins '\e.' insert-last-word
 
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
