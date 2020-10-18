@@ -71,6 +71,9 @@ setopt COMPLETE_ALIASES
 # make bash Alt+. work
 bindkey -M viins '\e.' insert-last-word
 
+# Ignore duplicates in history
+setopt HIST_IGNORE_ALL_DUPS
+
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
