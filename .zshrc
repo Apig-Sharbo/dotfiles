@@ -17,9 +17,12 @@ bindkey -v
 bindkey "^A" vi-beginning-of-line
 # bindkey "^E" vi-end-of-line
 
-# # Move with ^Left and ^Right
+# Move with ^Left and ^Right
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# Reverse search command history
+bindkey "^R" history-incremental-pattern-search-backward
 
 # Enable colors and change prompt:
 autoload -U colors && colors
@@ -91,6 +94,8 @@ alias ll='exa -aFgl --group-directories-first'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias mpv='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv'
 alias fast-mirrors='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
+
+alias docker-gcloud='docker run --rm -t -i --volumes-from gcloud-config -v ~/Documents/Docker/gcloud:/opt --name=my-gcloud google/cloud-sdk gcloud beta interactive'
 
 mpv-yt(){
     case $1 in
