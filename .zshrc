@@ -81,6 +81,9 @@ setopt COMPLETE_ALIASES
 # make bash Alt+. work
 bindkey -M viins '\e.' insert-last-word
 
+# make tab autocomplete menu cycle in reverse
+bindkey -M viins '^[[Z' reverse-menu-complete
+
 # Ignore duplicates in history
 setopt HIST_IGNORE_ALL_DUPS
 
