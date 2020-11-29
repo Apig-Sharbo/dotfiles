@@ -31,6 +31,7 @@ call plug#begin('~/local/share/nvim/plugged')
     Plug 'wata727/tflint'
     Plug 'juliosueiras/terraform-lsp'
     Plug 'hashivim/vim-terraform'
+    Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Initialize plugin system
 call plug#end()
@@ -156,22 +157,22 @@ autocmd! FileType fzf set laststatus=0 noshowmode noruler
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Compile st
-autocmd BufWritePost ~/st/config.h !sudo make -C ~/st clean install
+autocmd BufWritePost ~/suckless-mine/st/config.h !sudo make -C ~/suckless-mine/st clean install
 
 " Compile dmenu
-autocmd BufWritePost ~/dmenu/config.h !sudo make -C ~/dmenu clean install
+autocmd BufWritePost ~/dmenu/config.h !sudo make -C ~/suckless-mine/dmenu clean install
 
 " Compile dwm
-autocmd BufWritePost ~/dwm/config.h !sudo make -C ~/dwm clean install
+autocmd BufWritePost ~/suckless-mine/dwm/config.h !sudo make -C ~/suckless-mine/dwm clean install
 
 " Compile slstatus
-autocmd BufWritePost ~/slstatus/config.h !sudo make -C ~/slstatus clean install
+autocmd BufWritePost ~/suckless-mine/slstatus/config.h !sudo make -C ~/suckless-mine/slstatus clean install
 
 " Compile dwmblocks
 autocmd BufWritePost ~/dwmblocks/blocks.h !sudo make -C ~/dwmblocks clean install
 
 " Compile slock
-autocmd BufWritePost ~/slock/config.h !sudo make -C ~/slock clean install
+autocmd BufWritePost ~/suckless-mine/slock/config.h !sudo make -C ~/suckless-mine/slock clean install
 
 " Compile LateX in the current directory of the terminal
 autocmd BufWritePost *.tex !pdflatex %
@@ -183,6 +184,18 @@ autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType Vagrantfile setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType Dockerfile setlocal ts=2 sts=2 sw=2 expandtab
+
+" autocmd FocusGained,BufEnter * :silent! !
+" au FocusGained,BufEnter * :checktime
+" set autoread
+
+" trigger `autoread` when files changes on disk
+  set autoread
+  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+" notification after file change
+  autocmd FileChangedShellPost *
+    \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+
 
 " Replace Tabs with Spaces
     set expandtab
