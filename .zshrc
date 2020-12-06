@@ -135,10 +135,13 @@ if [ -f '/home/jargonin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/hom
 if [ -f '/home/jargonin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jargonin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 # status line theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Load starship prompt
+eval "$(starship init zsh)"
