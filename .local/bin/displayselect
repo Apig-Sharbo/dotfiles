@@ -57,7 +57,7 @@ onescreen() { # If only one output available or chosen.
 	}
 
 postrun() { # Stuff to run to clean up.
-	xwallpaper --center ~/.config/wallpaper/sunsetRocket.png		# Fix background if screen size/arangement has changed.
+	xwallpaper --maximize ~/.config/wallpaper/sunsetRocket2.png		# Fix background if screen size/arangement has changed.
 	{ killall dunst ; setsid -f dunst ;} >/dev/null 2>&1 # Restart dunst to ensure proper location on screen
 	}
 
