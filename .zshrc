@@ -1,9 +1,12 @@
+# Enable zsh profiling (go to the last line as well)
+# zmodload zsh/zprof
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # The following lines were added by compinstall
 
@@ -32,8 +35,8 @@ bindkey "^[[1;5D" backward-word
 bindkey "^R" history-incremental-pattern-search-backward
 
 # Enable colors and change prompt:
-autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+# autoload -U colors && colors
+# PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
 # On-demand rehash
 zshcache_time="$(date +%s%N)"
@@ -125,8 +128,15 @@ export EDITOR=/usr/bin/nvim
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export HISTCONTROL=ignoredups:erasedups
 
-# Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+# status line theme
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Load starship prompt
+eval "$(starship init zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/jargonin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jargonin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
@@ -134,14 +144,30 @@ if [ -f '/home/jargonin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/hom
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/jargonin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jargonin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-# status line theme
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# source <(kubectl completion zsh)
+
+# Lazy Loading kubectl completion
+# function kubectl() {
+#     if ! type __start_kubectl >/dev/null 2>&1; then
+#         source <(command kubectl completion zsh)
+#     fi
+#     command kubectl "$@"
+# }
+
+# if (( $+commands[kubectl] )); then
+#     __KUBECTL_COMPLETION_FILE="~/.zshcache/kubectl_completion"
+
+#     if [[ ! -f $__KUBECTL_COMPLETION_FILE || ! -s $__KUBECTL_COMPLETION_FILE ]]; then
+#         kubectl completion zsh >! $__KUBECTL_COMPLETION_FILE
+#     fi
+
+#     [[ -f $__KUBECTL_COMPLETION_FILE ]] && source $__KUBECTL_COMPLETION_FILE
+
+#     unset __KUBECTL_COMPLETION_FILE
+# fi
 
 # Load zsh-syntax-highlighting; should be last.
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Load starship prompt
-eval "$(starship init zsh)"
+# Enable zsh profiling
+# zprof
