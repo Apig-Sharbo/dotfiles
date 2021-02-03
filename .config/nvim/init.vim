@@ -1,6 +1,7 @@
 " My list of plugins
 call plug#begin('~/local/share/nvim/plugged')
 
+    Plug 'dag/vim-fish'
     " Plug 'ying17zi/vim-live-latex-preview'
 	" Plug 'ludovicchabant/vim-gutentags'	" manage Ctags
     " Plug 'ptzz/lf.vim'
@@ -46,6 +47,9 @@ colorscheme gruvbox
 " LaTex
 syntax on
 filetype plugin indent on
+
+" Set up :make to use fish for syntax checking.
+compiler fish
 
 " Unmap Q: Ex-mode
 map Q <Nop>
