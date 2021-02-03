@@ -1,5 +1,4 @@
-# UNCOMMENT AND RUN ONE TIME, IT WILL CREATE THE ALIASES GLOBALLY ONCE,
-# AND COMMENT EVERYTHING BACK TO MAKE FISH STARTUP TIME FASTER.
+## Defining functions in ~/.config/fish/functions is a lot faster than Aliases or Functions or Abbreviations because of autoloading.
 
 # alias grep='grep --colour=auto'
 # alias cp="cp -i"                          # confirm before overwriting something
