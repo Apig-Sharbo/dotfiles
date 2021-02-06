@@ -10,3 +10,6 @@
 # alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # alias mpv='prime-run mpv'
 # alias fast-mirrors='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
+#
+
+starship init fish | source
