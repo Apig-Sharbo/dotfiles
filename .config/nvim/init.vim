@@ -1,5 +1,5 @@
 " My list of plugins
-call plug#begin('~/local/share/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
     Plug 'dag/vim-fish'
     " Plug 'ying17zi/vim-live-latex-preview'
