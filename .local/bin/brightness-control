@@ -1,0 +1,23 @@
+#!/bin/sh
+
+bri=$(cat /sys/class/backlight/intel_backlight/brightness)
+max_bri=$(cat /sys/class/backlight/intel_backlight/max_brightness)
+
+# bri_perc=$(( 100 * bri / max_bri))
+
+# printf "%s \n" "$bri"
+# printf "%s \n" "$bri_perc"
+
+## For benchmarking performace
+# for _ in $(seq 1 100) ;do ~/.local/bin/statusbar/brightness; done;
+
+added_bri=$(( $1 * max_bri /100 ))
+new_bri=$(( bri + added_bri ))
+
+# printf "%s \n" "$new_bri"
+
+
+if [ "$new_bri" -le "$max_bri" ] && [ "$new_bri" -ge 0 ];
+then
+    echo "$new_bri" > '/sys/class/backlight/intel_backlight/brightness'
+fi

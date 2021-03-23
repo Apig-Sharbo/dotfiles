@@ -1,12 +1,18 @@
 # The Simple X Hotkey Daemon is the program used by LARBS to map most of the
 # dwm-independent commands.  This file is pretty readable, so I'll let you read
 # it.
+#
+# NOTE: The line on the upper position will always be the one to run
+# If it's commented out don't expect the line below it to run.
+# You have to switch they're positions.
 
 # Brightness
 XF86MonBrightnessUp
-    xbacklight -inc 1
+    ~/.local/bin/brightness-control +1; kill -35 $(pidof dwmblocks)
+    # xbacklight -inc 1 ; kill -35 $(pidof dwmblocks)
 XF86MonBrightnessDown
-    xbacklight -dec 1
+    ~/.local/bin/brightness-control -1; kill -35 $(pidof dwmblocks)
+    # xbacklight -dec 1 ; kill -35 $(pidof dwmblocks)
 
 # Media control
 XF86AudioNext
@@ -18,11 +24,11 @@ XF86AudioPlay
 
 # Volume control
 XF86AudioRaiseVolume
-    pamixer -i 2
+    pamixer -i 2 ; kill -36 $(pidof dwmblocks)
 XF86AudioLowerVolume
-    pamixer -d 2
+    pamixer -d 2 ; kill -36 $(pidof dwmblocks)
 XF86AudioMute
-    pamixer -t
+    pamixer -t ; kill -36 $(pidof dwmblocks)
 
 
 # Screenshot

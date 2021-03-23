@@ -1,5 +1,6 @@
 numlockx &
-slstatus &
+/* slstatus & */
+dwmblocks &
 /* picom & */
 dunst &
 sxhkd &
