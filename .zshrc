@@ -11,7 +11,7 @@
 # The following lines were added by compinstall
 
 zstyle ':completion:*' completer _complete _ignored
-zstyle ':completion:*' matcher-list ''
+zstyle ':completion:*' menu select
 zstyle :compinstall filename '/home/jargonin/.zshrc'
 
 autoload -Uz compinit
