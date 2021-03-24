@@ -29,7 +29,7 @@ SAVEHIST=1000
 bindkey -e
 
 bindkey "^A" vi-beginning-of-line
-# bindkey "^E" vi-end-of-line
+bindkey "^E" vi-end-of-line
 
 # Move with ^Left and ^Right
 bindkey "^[[1;5C" forward-word
@@ -82,7 +82,7 @@ add-zsh-hook -Uz precmd rehash_precmd
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
+bindkey '^[e' edit-command-line
 setopt COMPLETE_ALIASES
 
 # make bash Alt+. work
@@ -97,12 +97,9 @@ setopt noflowcontrol
 # Ignore duplicates in history
 setopt HIST_IGNORE_ALL_DUPS
 
-
-# alias ls='ls --color=auto'
-alias grep='grep --colour=auto'
-
-# NOTE: this is to not make the alias grep be used to create this alias
+# NOTE: `command` is used to use the actual grep command, and not the alias.
 # alias testgrep='command grep'
+alias grep='grep --colour=auto'
 
 # alias egrep='egrep --colour=auto'
 # alias fgrep='fgrep --colour=auto'
@@ -111,8 +108,9 @@ alias grep='grep --colour=auto'
 # alias free='free -m'                      # show sizes in MB
 # alias np='nano -w PKGBUILD'
 # alias more=less
-# alias ll='ls -alh'
-# alias la='ls -A'
+# alias ls='ls --color=auto'
+# alias ll='ls -alh --color=auto'
+# alias la='ls -A --color=auto'
 alias ls='exa -F --group-directories-first'
 alias la='exa -aF --group-directories-first'
 alias ll='exa -aFgl --group-directories-first'
@@ -136,7 +134,7 @@ mpv-yt(){
 export EDITOR=/usr/bin/nvim
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export HISTCONTROL=ignoredups:erasedups
-export ZSH_CACHE_DIR="$HOME/.zshcache"
+export ZSH_CACHE_DIR="$HOME/.zsh_cache"
 
 
 # status line theme
@@ -149,10 +147,10 @@ export ZSH_CACHE_DIR="$HOME/.zshcache"
 eval "$(starship init zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/jargonin/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/home/jargonin/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "${HOME}/Downloads/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/Downloads/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/jargonin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jargonin/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "${HOME}/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
 
 # source <(kubectl completion zsh)
 
