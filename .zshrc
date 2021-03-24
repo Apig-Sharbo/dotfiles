@@ -17,12 +17,16 @@ zstyle :compinstall filename '/home/jargonin/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-# Lines configured by zsh-newuser-install
+
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-bindkey -v
-# End of lines configured by zsh-newuser-install
+
+# Vim mode
+# bindkey -v
+
+# Emacs mode
+bindkey -e
 
 bindkey "^A" vi-beginning-of-line
 # bindkey "^E" vi-end-of-line
@@ -56,25 +60,25 @@ rehash_precmd() {
 add-zsh-hook -Uz precmd rehash_precmd
 
 # Change cursor shape for different vi modes.
-function zle-keymap-select {
-  if [[ ${KEYMAP} == vicmd ]] ||
-     [[ $1 = 'block' ]]; then
-    echo -ne '\e[1 q'
-  elif [[ ${KEYMAP} == main ]] ||
-       [[ ${KEYMAP} == viins ]] ||
-       [[ ${KEYMAP} = '' ]] ||
-       [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
-  fi
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
-}
-zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+# function zle-keymap-select {
+#   if [[ ${KEYMAP} == vicmd ]] ||
+#      [[ $1 = 'block' ]]; then
+#     echo -ne '\e[1 q'
+#   elif [[ ${KEYMAP} == main ]] ||
+#        [[ ${KEYMAP} == viins ]] ||
+#        [[ ${KEYMAP} = '' ]] ||
+#        [[ $1 = 'beam' ]]; then
+#     echo -ne '\e[5 q'
+#   fi
+# }
+# zle -N zle-keymap-select
+# zle-line-init() {
+#     zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+#     echo -ne "\e[5 q"
+# }
+# zle -N zle-line-init
+# echo -ne '\e[5 q' # Use beam shape cursor on startup.
+# preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
@@ -93,25 +97,30 @@ setopt noflowcontrol
 # Ignore duplicates in history
 setopt HIST_IGNORE_ALL_DUPS
 
-alias ls='ls --color=auto'
+
+# alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
-alias egrep='egrep --colour=auto'
-alias fgrep='fgrep --colour=auto'
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
+
+# NOTE: this is to not make the alias grep be used to create this alias
+# alias testgrep='command grep'
+
+# alias egrep='egrep --colour=auto'
+# alias fgrep='fgrep --colour=auto'
+# alias cp="cp -i"                          # confirm before overwriting something
+# alias df='df -h'                          # human-readable sizes
+# alias free='free -m'                      # show sizes in MB
+# alias np='nano -w PKGBUILD'
+# alias more=less
 # alias ll='ls -alh'
 # alias la='ls -A'
 alias ls='exa -F --group-directories-first'
 alias la='exa -aF --group-directories-first'
 alias ll='exa -aFgl --group-directories-first'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias mpv='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv'
+alias mpv='prime-run mpv'
 alias fast-mirrors='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
 
-alias docker-gcloud='docker run --rm -t -i --volumes-from gcloud-config -v ~/Documents/Docker/gcloud:/opt --name=my-gcloud google/cloud-sdk gcloud beta interactive'
+# alias docker-gcloud='docker run --rm -t -i --volumes-from gcloud-config -v ~/Documents/Docker/gcloud:/opt --name=my-gcloud google/cloud-sdk gcloud beta interactive'
 
 mpv-yt(){
     case $1 in
@@ -121,12 +130,13 @@ mpv-yt(){
       4k)  w=3840 ;;
       8k)  w=7680 ;;
     esac
-    __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2";
+    prime-run mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2";
 }
 
 export EDITOR=/usr/bin/nvim
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export HISTCONTROL=ignoredups:erasedups
+export ZSH_CACHE_DIR="$HOME/.zshcache"
 
 
 # status line theme
@@ -154,17 +164,21 @@ if [ -f '/home/jargonin/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then .
 #     command kubectl "$@"
 # }
 
-# if (( $+commands[kubectl] )); then
-#     __KUBECTL_COMPLETION_FILE="~/.zshcache/kubectl_completion"
+# kubectl completion generate and cache. To be used with kubectl installed with gcloud sdk
+if (( $+commands[kubectl] )); then
+    __KUBECTL_COMPLETION_FILE="${ZSH_CACHE_DIR}/kubectl_completion"
 
-#     if [[ ! -f $__KUBECTL_COMPLETION_FILE || ! -s $__KUBECTL_COMPLETION_FILE ]]; then
-#         kubectl completion zsh >! $__KUBECTL_COMPLETION_FILE
-#     fi
+    if [[ ! -f $__KUBECTL_COMPLETION_FILE || ! -s $__KUBECTL_COMPLETION_FILE ]]; then
+        kubectl completion zsh >! $__KUBECTL_COMPLETION_FILE
+    fi
 
-#     [[ -f $__KUBECTL_COMPLETION_FILE ]] && source $__KUBECTL_COMPLETION_FILE
+    [[ -f $__KUBECTL_COMPLETION_FILE ]] && source $__KUBECTL_COMPLETION_FILE
 
-#     unset __KUBECTL_COMPLETION_FILE
-# fi
+    unset __KUBECTL_COMPLETION_FILE
+fi
+
+# Load zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
 # Load zsh-syntax-highlighting; should be last.
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
