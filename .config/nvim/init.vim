@@ -52,19 +52,19 @@ filetype plugin indent on
 compiler fish
 
 " Unmap Q: Ex-mode
-map Q <Nop>
+noremap Q <Nop>
 
-nmap <silent> <A-k> <Plug>(ale_previous_wrap)
-nmap <silent> <A-j> <Plug>(ale_next_wrap)
+nnoremap <silent> <A-k> <Plug>(ale_previous_wrap)
+nnoremap <silent> <A-j> <Plug>(ale_next_wrap)
 
 xnoremap K :move '<-2<CR>gv-gv
 xnoremap J :move '>+1<CR>gv-gv
 
 " Toggle NerdTree
-map <C-n> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 
 " Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+noremap <silent> <leader><cr> :noh<cr>
 
 " fzf
 nnoremap <silent> <C-p> :Files<CR>
@@ -73,21 +73,21 @@ nnoremap <silent> <leader>o :Buffers<CR>
 nnoremap <C-f> :Rg<Space>
 
 " Shortcutting split navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 
-nmap <silent> <leader>= <C-w>=
-nmap <silent> <leader>> :vertical resize +5<CR>
-nmap <silent> <leader>< :vertical resize -5<CR>
-nmap <silent> <leader>- :resize -5<CR>
-nmap <silent> <leader>+ :resize +5<CR>
+nnoremap <silent> <leader>= <C-w>=
+nnoremap <silent> <leader>> :vertical resize +5<CR>
+nnoremap <silent> <leader>< :vertical resize -5<CR>
+nnoremap <silent> <leader>- :resize -5<CR>
+nnoremap <silent> <leader>+ :resize +5<CR>
 
-nmap <leader>g :ALEGoToDefinition<CR>
+nnoremap <leader>g :ALEGoToDefinition<CR>
 " These 👇 are deprecated and make 👆 slow.
-" nmap <leader>gt :ALEGoToDefinitionInTab<CR>
-" nmap <leader>gs :ALEGoToDefinitionInSplit<CR>
+" nnoremap <leader>gt :ALEGoToDefinitionInTab<CR>
+" nnoremap <leader>gs :ALEGoToDefinitionInSplit<CR>
 
 " Uncomment to send output to null
 command! W :w !sudo tee %
@@ -126,6 +126,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  	'python': ['black'],
 \   'terraform': ['terraform'],
+\   'javascript' : ['eslint']
 \}
 
 let g:ale_linters = {
