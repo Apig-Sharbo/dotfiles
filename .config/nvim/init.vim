@@ -1,22 +1,22 @@
 " My list of plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-    Plug 'dag/vim-fish'
+    " Plug 'dag/vim-fish'
     " Plug 'ying17zi/vim-live-latex-preview'
 	" Plug 'ludovicchabant/vim-gutentags'	" manage Ctags
     " Plug 'ptzz/lf.vim'
-    Plug 'rbgrouleff/bclose.vim'
+    Plug 'rbgrouleff/bclose.vim'    " Buffer delete
 	Plug 'preservim/nerdtree'		" Tree view Folders and Files
-	Plug 'ryanoasis/vim-devicons'
-	" Plug 'Xuyuanp/nerdtree-git-plugin'	" NerdTree git integration
-	Plug 'SirVer/ultisnips'			" Ultimate solution for snippets
+	Plug 'ryanoasis/vim-devicons'   " Add icons to nerdtree
+    Plug 'Xuyuanp/nerdtree-git-plugin'	" NerdTree git integration
+	" Plug 'SirVer/ultisnips'			" Ultimate solution for snippets
 	Plug 'Shougo/deoplete.nvim' 		" Autocomplete
 	Plug 'deoplete-plugins/deoplete-jedi'
 	Plug 'jiangmiao/auto-pairs'		" Autopair brackets, quotes, etc...
 	Plug 'tpope/vim-commentary'		" Simple code Commenter
-	Plug 'preservim/nerdcommenter'		" Advanced code Commenter
+	" Plug 'preservim/nerdcommenter'		" Advanced code Commenter
 	Plug 'tpope/vim-fugitive'		" Ultimate Git setup
-        " Plug 'airblade/vim-gitgutter'
+    " Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-surround'		" Surround with ([{'`\", etc...
 	" Plug 'vim-syntastic/syntastic' 	" Syntax check
 	" Plug 'nvie/vim-flake8'		" PEP 8 check
@@ -50,7 +50,7 @@ syntax on
 filetype plugin indent on
 
 " Set up :make to use fish for syntax checking.
-compiler fish
+" compiler fish
 
 " Unmap Q: Ex-mode
 noremap Q <Nop>
