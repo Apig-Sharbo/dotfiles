@@ -3,27 +3,27 @@ call plug#begin('~/.local/share/nvim/plugged')
 
     " Plug 'dag/vim-fish'
     " Plug 'ying17zi/vim-live-latex-preview'
-	" Plug 'ludovicchabant/vim-gutentags'	" manage Ctags
+    " Plug 'ludovicchabant/vim-gutentags'   " manage Ctags
     " Plug 'ptzz/lf.vim'
     Plug 'rbgrouleff/bclose.vim'    " Buffer delete
-	Plug 'preservim/nerdtree'		" Tree view Folders and Files
-	Plug 'ryanoasis/vim-devicons'   " Add icons to nerdtree
-    Plug 'Xuyuanp/nerdtree-git-plugin'	" NerdTree git integration
-	" Plug 'SirVer/ultisnips'			" Ultimate solution for snippets
-	Plug 'Shougo/deoplete.nvim' 		" Autocomplete
-	Plug 'deoplete-plugins/deoplete-jedi'
-	Plug 'jiangmiao/auto-pairs'		" Autopair brackets, quotes, etc...
-	Plug 'tpope/vim-commentary'		" Simple code Commenter
-	" Plug 'preservim/nerdcommenter'		" Advanced code Commenter
-	Plug 'tpope/vim-fugitive'		" Ultimate Git setup
+    Plug 'preservim/nerdtree'       " Tree view Folders and Files
+    Plug 'ryanoasis/vim-devicons'   " Add icons to nerdtree
+    Plug 'Xuyuanp/nerdtree-git-plugin'  " NerdTree git integration
+    " Plug 'SirVer/ultisnips'           " Ultimate solution for snippets
+    Plug 'Shougo/deoplete.nvim'         " Autocomplete
+    Plug 'deoplete-plugins/deoplete-jedi'
+    Plug 'jiangmiao/auto-pairs'     " Autopair brackets, quotes, etc...
+    Plug 'tpope/vim-commentary'     " Simple code Commenter
+    " Plug 'preservim/nerdcommenter'        " Advanced code Commenter
+    Plug 'tpope/vim-fugitive'       " Ultimate Git setup
     " Plug 'airblade/vim-gitgutter'
-	Plug 'tpope/vim-surround'		" Surround with ([{'`\", etc...
-	" Plug 'vim-syntastic/syntastic' 	" Syntax check
-	" Plug 'nvie/vim-flake8'		" PEP 8 check
-	Plug 'dense-analysis/ale'		" Linters and Fixers
-	Plug 'unblevable/quick-scope'		" Vim motion highlighting
-	" Plug 'ap/vim-css-color'		" CSS colors
-	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }	" CSS colors
+    Plug 'tpope/vim-surround'       " Surround with ([{'`\", etc...
+    " Plug 'vim-syntastic/syntastic'    " Syntax check
+    " Plug 'nvie/vim-flake8'        " PEP 8 check
+    Plug 'dense-analysis/ale'       " Linters and Fixers
+    Plug 'unblevable/quick-scope'       " Vim motion highlighting
+    " Plug 'ap/vim-css-color'       " CSS colors
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }   " CSS colors
     " Plug 'morhetz/gruvbox'
     Plug 'gruvbox-community/gruvbox'
     " Plug 'jremmen/vim-ripgrep'
@@ -135,13 +135,13 @@ let g:terraform_fmt_on_save=1
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\  	'python': ['black'],
+\   'python': ['black'],
 \   'terraform': ['terraform'],
 \   'javascript' : ['eslint']
 \}
 
 let g:ale_linters = {
-\	'python': ['flake8'],
+\   'python': ['flake8'],
 \   'latex':['texlab'],
 \   'terraform': ['tflint'],
 \}
@@ -236,7 +236,7 @@ set breakindent
     " set scrolloff=999
 
 " Set terminal colors
-	set termguicolors
+    set termguicolors
 
 " Disable stupid backup and swap files - they trigger too many events
 " for file system watchers
