@@ -67,10 +67,20 @@ noremap <C-n> :NERDTreeToggle<CR>
 noremap <silent> <leader><cr> :noh<cr>
 
 " fzf
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
 nnoremap <silent> <leader>o :Buffers<CR>
-nnoremap <C-f> :Rg<Space>
+nnoremap <C-f> :RG<Space>
 
 " Shortcutting split navigation
 noremap <C-h> <C-w>h
