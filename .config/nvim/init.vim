@@ -27,6 +27,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Plug 'morhetz/gruvbox'
     Plug 'gruvbox-community/gruvbox'
     " Plug 'jremmen/vim-ripgrep'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'hashicorp/terraform'
     Plug 'wata727/tflint'
