@@ -30,9 +30,12 @@ XF86AudioLowerVolume
 XF86AudioMute
     pamixer -t ; kill -36 $(pidof dwmblocks)
 
+# Trayer system tray
+super + shift + t
+    ~/.local/bin/mytray
 
 # Screenshot
 Print
-    maim ~/Pictures/pic-full-"$(date '+%y%m%d-%H%M-%S').png"
+    maim ~/Pictures/pic-full-"$(date '+%y%m%d-%H%M-%S').png"  && notify-send -h string:frcolor:#44ff44 'Screenshot Saved'
 shift + Print
     maimpick

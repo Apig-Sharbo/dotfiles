@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -n "$(pidof trayer)" ];then
+    killall trayer
+else
+    trayer --widthtype request --edge top --height 18
+fi
