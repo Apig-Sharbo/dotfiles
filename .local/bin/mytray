@@ -3,5 +3,7 @@
 if [ -n "$(pidof trayer)" ];then
     killall trayer
 else
-    trayer --widthtype request --edge top --height 18
+    # the height must be at least 1 pixel larger than your status bar, to stay in place
+    # and not get pushed by the status bar
+    trayer --widthtype request --edge top --height 19
 fi
