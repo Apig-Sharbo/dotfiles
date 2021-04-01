@@ -4,11 +4,17 @@
 # choose the kind of screenshot to take, including copying the image or even
 # highlighting an area to copy. scrotcucks on suicidewatch right now.
 
-case "$(printf "a selected area\\ncurrent window\\nfull screen\\na selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)" | dmenu -l 6 -i -p "Screenshot which area?")" in
-	"a selected area") maim -suD ~/Pictures/pic-selected-"$(date '+%y%m%d-%H%M-%S').png" ;;
-	"current window") maim -i "$(xdotool getactivewindow)" ~/Pictures/pic-window-"$(date '+%y%m%d-%H%M-%S').png" ;;
-	"full screen") maim ~/Pictures/pic-full-"$(date '+%y%m%d-%H%M-%S').png" ;;
-	"a selected area (copy)") maim -suD | xclip -selection clipboard -t image/png ;;
-	"current window (copy)") maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png ;;
-	"full screen (copy)") maim | xclip -selection clipboard -t image/png ;;
+case "$(printf "a selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)\\na selected area\\ncurrent window\\nfull screen" | dmenu -l 6 -i -p "Screenshot which area?")" in
+	"a selected area (copy)")
+        maim -suD | xclip -selection clipboard -t image/png && notify-send -h string:frcolor:#44ff44 'Screenshot Copied' ;;
+	"current window (copy)")
+        maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png && notify-send -h string:frcolor:#44ff44 'Screenshot Copied' ;;
+	"full screen (copy)")
+        maim | xclip -selection clipboard -t image/png  && notify-send -h string:frcolor:#44ff44 'Screenshot Copied' ;;
+	"a selected area")
+        maim -suD ~/Pictures/pic-selected-"$(date '+%y%m%d-%H%M-%S').png"  && notify-send -h string:frcolor:#44ff44 'Screenshot Saved';;
+	"current window")
+        maim -i "$(xdotool getactivewindow)" ~/Pictures/pic-window-"$(date '+%y%m%d-%H%M-%S').png" && notify-send -h string:frcolor:#44ff44 'Screenshot Saved' ;;
+	"full screen")
+        maim ~/Pictures/pic-full-"$(date '+%y%m%d-%H%M-%S').png" && notify-send -h string:frcolor:#44ff44 'Screenshot Saved' ;;
 esac
