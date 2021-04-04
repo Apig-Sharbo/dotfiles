@@ -1,7 +1,7 @@
 #!/bin/sh
 
-if [ -n "$(pidof trayer)" ];then
-    killall trayer
+if pidof trayer ;then
+    pkill trayer
 else
     # the height must be at least 1 pixel larger than your status bar, to stay in place
     # and not get pushed by the status bar
