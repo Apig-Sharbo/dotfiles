@@ -142,8 +142,12 @@ snd_intel_dspcfg
 snd_intel_nhlt
 snd_pcm
 snd_pcm_dmaengine
+snd_rawmidi
+snd_seq_device
 snd_soc_core
 snd_timer
+snd_usb_audio
+snd_usbmidi_lib
 soundcore
 soundwire_bus
 soundwire_cadence
