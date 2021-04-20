@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     " Plug 'ying17zi/vim-live-latex-preview'
     " Plug 'ludovicchabant/vim-gutentags'   " manage Ctags
     " Plug 'ptzz/lf.vim'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " markdown preview
     Plug 'rbgrouleff/bclose.vim'    " Buffer delete
     Plug 'preservim/nerdtree'       " Tree view Folders and Files
     Plug 'ryanoasis/vim-devicons'   " Add icons to nerdtree
@@ -166,33 +167,25 @@ command! -bang -nargs=* Rg
       \   fzf#vim#with_preview(), <bang>0)
 
 " Hide statusline with fzf
-autocmd! FileType fzf set laststatus=0 noshowmode noruler
-  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+    autocmd! FileType fzf set laststatus=0 noshowmode noruler
+      \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " Close Netrw if it's the only buffer open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
 " Compile st
 autocmd BufWritePost ~/suckless-mine/st/config.h !sudo make -C ~/suckless-mine/st clean install
-
 " Compile dmenu
 autocmd BufWritePost ~/dmenu/config.h !sudo make -C ~/suckless-mine/dmenu clean install
-
 " Compile dwm
 autocmd BufWritePost ~/suckless-mine/dwm/config.h !sudo make -C ~/suckless-mine/dwm clean install
-
 " Compile slstatus
 autocmd BufWritePost ~/suckless-mine/slstatus/config.h !sudo make -C ~/suckless-mine/slstatus clean install
-
 " Compile dwmblocks
 autocmd BufWritePost ~/dwmblocks/blocks.h !sudo make -C ~/dwmblocks clean install
-
 " Compile slock
 autocmd BufWritePost ~/suckless-mine/slock/config.h !sudo make -C ~/suckless-mine/slock clean install
-
 " Compile LateX in the current directory of the terminal
 autocmd BufWritePost *.tex !pdflatex %
-
 " Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
@@ -206,11 +199,11 @@ autocmd FileType Dockerfile setlocal ts=2 sts=2 sw=2 expandtab
 " set autoread
 
 " trigger `autoread` when files changes on disk
-  set autoread
-  autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
+    set autoread
+    autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
 " notification after file change
-  autocmd FileChangedShellPost *
-    \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
+    autocmd FileChangedShellPost *
+        \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 
 
 " Replace Tabs with Spaces
@@ -221,7 +214,7 @@ autocmd FileType Dockerfile setlocal ts=2 sts=2 sw=2 expandtab
     set softtabstop=4
 
 " Keep indentation for very long strings that wrap around to new line
-set breakindent
+    set breakindent
 
 " Deoplete close recomandation window after selection
     set completeopt-=preview
@@ -240,9 +233,9 @@ set breakindent
 
 " Disable stupid backup and swap files - they trigger too many events
 " for file system watchers
-set nobackup
-set nowritebackup
-set noswapfile
+    set nobackup
+    set nowritebackup
+    set noswapfile
 
 " sample settings
 " hi Pmenu ctermfg=254 ctermbg=237 cterm=NONE guifg=#e1e1e1 guibg=#383838 gui=NONE
