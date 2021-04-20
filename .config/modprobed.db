@@ -45,6 +45,8 @@ fb_sys_fops
 fuse
 ghash_clmulni_intel
 glue_helper
+hid
+hid_generic
 hp_accel
 hp_wireless
 hp_wmi
@@ -180,6 +182,7 @@ videobuf2_v4l2
 videobuf2_vmalloc
 videodev
 vmmon
+vmnet
 vmw_vmci
 winesync
 wmi
