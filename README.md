@@ -11,6 +11,13 @@ libnotify       |  allows desktop notifications
 dunst           |  is a suckless notification system
 sxiv            |  is a minimalist image viewer
 xwallpaper      |  sets the wallpaper
+lxappearance  |  is for setting system gtk theme
+qt5ct  |  is for setting system qt theme
+pcmanfm  |  is a gui file manager
+mangohud  |  is a A Vulkan and OpenGL overlay for monitoring FPS, temperatures, CPU/GPU load and more
+vkbasalt  |  is a Vulkan post processing layer to enhance the visual graphics of games
+lutris  |  is a gaming client for Linux
+nbfc-git  |  is to control laptop fan speed
 qogir-gtk-theme  |  gives the dark GTK theme
 neovim  |  a tidier vim with some useful features
 mpv  |  is the patrician's choice video player
