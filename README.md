@@ -18,7 +18,11 @@ mangohud  |  is a A Vulkan and OpenGL overlay for monitoring FPS, temperatures, 
 vkbasalt  |  is a Vulkan post processing layer to enhance the visual graphics of games
 lutris  |  is a gaming client for Linux
 nbfc-git  |  is to control laptop fan speed
-qogir-gtk-theme  |  gives the dark GTK theme
+qogir-gtk-theme  |  is a flat Design theme for GTK
+arc-themes-solid-breath  | is a flat theme without transparent elements Manjaro Breath variant
+breath2-icon-themes  |  is KDE breath2 icon theme
+breeze-icons  |  is KDE Breeze icon themes
+xcursor-breeze  |  Breeze cursor theme (KDE Plasma 5). This package is for usage in non-KDE Plasma desktops.
 neovim  |  a tidier vim with some useful features
 mpv  |  is the patrician's choice video player
 cmus | is terminal music player
