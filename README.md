@@ -43,6 +43,7 @@ zsh-autosuggestions  |  provides autosuggestions for zsh
 zsh-syntax-highlighting  |  provides syntax highlighting for zsh
 dwmblocks  |  serves as the modular status bar
 dmenu |  runs commands and provides a UI for selection
+j4-dmenu-desktop  |  is to find .desktop files and offer you a menu to start an application using dmenu
 st  |  is my custom build of suckless's terminal emulator
 dwm |  is the window manager
 slock  |  allows you to lock your computer, and quickly unlock with your password
