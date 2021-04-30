@@ -1,4 +1,4 @@
-# List of Apps i use:
+# List of packages i use:
 
 Name in Repo    |   Purpose
 -------------   |  :-------------:
