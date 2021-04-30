@@ -34,7 +34,6 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'wata727/tflint'
     Plug 'juliosueiras/terraform-lsp'
     Plug 'hashivim/vim-terraform'
-    Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Initialize plugin system
 call plug#end()
