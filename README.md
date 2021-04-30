@@ -35,6 +35,7 @@ pulsemixer  |  is an audio controller
 pamixer  |  is a command-line audio interface
 maim  |  can take quick screenshots at your request
 unar  |  extracts compressed files with multiple formats
+zip  |  is a Compressor/archiver for creating and modifying zipfiles
 xclip  |  allows for copying and pasting from the command line
 youtube-dl  |  can download any YouTube video (or playlist or channel) when given the link
 zathura  |  is a pdf viewer with vim-like bindings
