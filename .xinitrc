@@ -39,4 +39,5 @@ fi
 . $HOME/.xprofile
 
 # exec startplasma-x11 # kde
-exec dwm
+# exec dwm
+exec awesome

@@ -1,9 +1,9 @@
-numlockx &
+/* numlockx & */
 lxpolkit &
 /* slstatus & */
-dwmblocks &
+/* dwmblocks & */
 /* picom & */
-dunst &
+/* dunst & */
 sxhkd &
 /* touchpad & */
 /* xwallpaper --maximize ~/.config/wallpaper/sunsetRocket2.png */
