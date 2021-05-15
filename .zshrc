@@ -131,13 +131,6 @@ mpv-yt(){
     prime-run mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2";
 }
 
-export EDITOR=/usr/bin/nvim
-export VISUAL=$EDITOR
-export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
-export HISTCONTROL=ignoredups:erasedups
-export ZSH_CACHE_DIR="$HOME/.zsh_cache"
-
-
 # status line theme
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 

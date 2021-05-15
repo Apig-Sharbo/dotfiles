@@ -7,8 +7,3 @@ lxpolkit &
 sxhkd &
 /* touchpad & */
 /* xwallpaper --maximize ~/.config/wallpaper/sunsetRocket2.png */
-export _JAVA_AWT_WM_NONREPARENTING=1
-export QT_QPA_PLATFORMTHEME="qt5ct"
-
-/* export QT_STYLE_OVERRIDE=kvantum */
-/* XDG_CURRENT_DESKTOP=KDE */
