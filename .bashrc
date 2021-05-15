@@ -91,30 +91,8 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias cp="cp -i"                          # confirm before overwriting something
-alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB
-alias np='nano -w PKGBUILD'
-alias more=less
-# alias ll='ls -alh'
-# alias la='ls -A'
-alias ls='exa -F --group-directories-first'
-alias la='exa -aF --group-directories-first'
-alias ll='exa -aFgl --group-directories-first'
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias mpv='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv'
-alias fast-mirrors='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
-
-mpv-yt(){
-    case $1 in
-      hd)  w=1280 ;;
-      fhd) w=1920 ;;
-      2k)  w=2560 ;;
-      4k)  w=3840 ;;
-      8k)  w=7680 ;;
-    esac
-    __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2";
-}
+# Source Aliases from .aliasrc
+[ -f "${HOME}/.aliasrc" ] && source "${HOME}/.aliasrc"
 
 xhost +local:root > /dev/null 2>&1
 

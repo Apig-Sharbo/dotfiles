@@ -85,6 +85,9 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^[e' edit-command-line
 setopt COMPLETE_ALIASES
 
+# Source Aliases from .aliasrc
+[ -f "${HOME}/.aliasrc" ] && source "${HOME}/.aliasrc"
+
 # make bash Alt+. work
 bindkey -M viins '\e.' insert-last-word
 
@@ -96,40 +99,6 @@ setopt noflowcontrol
 
 # Ignore duplicates in history
 setopt HIST_IGNORE_ALL_DUPS
-
-# NOTE: `command` is used to use the actual grep command, and not the alias.
-# alias testgrep='command grep'
-alias grep='grep --colour=auto'
-
-# alias egrep='egrep --colour=auto'
-# alias fgrep='fgrep --colour=auto'
-# alias cp="cp -i"                          # confirm before overwriting something
-# alias df='df -h'                          # human-readable sizes
-# alias free='free -m'                      # show sizes in MB
-# alias np='nano -w PKGBUILD'
-# alias more=less
-# alias ls='ls --color=auto'
-# alias ll='ls -alh --color=auto'
-# alias la='ls -A --color=auto'
-alias ls='exa -F --group-directories-first'
-alias la='exa -aF --group-directories-first'
-alias ll='exa -aFgl --group-directories-first'
-alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias mpv='prime-run mpv'
-alias fast-mirrors='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
-
-# alias docker-gcloud='docker run --rm -t -i --volumes-from gcloud-config -v ~/Documents/Docker/gcloud:/opt --name=my-gcloud google/cloud-sdk gcloud beta interactive'
-
-mpv-yt(){
-    case $1 in
-      hd)  w=1280 ;;
-      fhd) w=1920 ;;
-      2k)  w=2560 ;;
-      4k)  w=3840 ;;
-      8k)  w=7680 ;;
-    esac
-    prime-run mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2";
-}
 
 # status line theme
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
