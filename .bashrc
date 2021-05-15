@@ -157,10 +157,10 @@ shopt -s histappend
 # }
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/jargonin/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/home/jargonin/Downloads/google-cloud-sdk/path.bash.inc'; fi
+if [ -f "${HOME}/Downloads/google-cloud-sdk/path.bash.inc" ]; then . "${HOME}/Downloads/google-cloud-sdk/path.bash.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/jargonin/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jargonin/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f "${HOME}/Downloads/google-cloud-sdk/completion.bash.inc" ]; then . "${HOME}/Downloads/google-cloud-sdk/completion.bash.inc"; fi
 
 # source <(kubectl completion bash)
 
@@ -170,6 +170,4 @@ stty start ''
 stty -ixon
 stty -ixoff
 
-export EDITOR=/usr/bin/nvim
-export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
-export HISTCONTROL=ignoredups:erasedups
+[[ -f '.zshenv' ]] && . "${HOME}/.zshenv"

@@ -2,7 +2,7 @@
 # ~/.bash_profile
 #
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.bashrc ]] && . "${HOME}/.bashrc"
 
 # Autostart X at login
 
