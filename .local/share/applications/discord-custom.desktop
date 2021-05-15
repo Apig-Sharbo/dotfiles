@@ -3,7 +3,7 @@ Type=Application
 Version=1.0
 Name=Discord Custom
 Comment=All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone.
-Exec=/usr/bin/brave --app=https://discordapp.com/app
+Exec=sh -c "\$BROWSER --app=https://discordapp.com/app"
 Icon=discord
 Terminal=false
 Categories=Network;InstantMessaging;

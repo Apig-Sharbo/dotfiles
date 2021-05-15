@@ -47,9 +47,11 @@ acpilight  |  enables changing screen brightness levels
 zsh-autosuggestions  |  provides autosuggestions for zsh
 zsh-syntax-highlighting  |  provides syntax highlighting for zsh
 dwmblocks  |  serves as the modular status bar
+slstatus  |  is suckless's status monitor
 dmenu |  runs commands and provides a UI for selection
 j4-dmenu-desktop  |  is to find .desktop files and offer you a menu to start an application using dmenu
-st  |  is my custom build of suckless's terminal emulator
-dwm |  is the window manager
-slock  |  allows you to lock your computer, and quickly unlock with your password
+st  |  is suckless's terminal emulator
+dwm |  is suckless's window manager
+awesome  |  is a highly configurable, next generation framework window manager for X
+slock  |  is suckless's lockscreen
 xev  |  prints contents of X events (basically to get keycodes of keys pressed)
