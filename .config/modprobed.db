@@ -3,8 +3,12 @@ ac97_bus
 acpi_pad
 acpi_thermal_rel
 aesni_intel
+af_alg
 agpgart
 ahci
+algif_aead
+algif_hash
+algif_skcipher
 at24
 atkbd
 battery
@@ -17,6 +21,7 @@ btcoexist
 btintel
 btrtl
 btusb
+cbc
 ccm
 cdc_acm
 cdrom
@@ -32,9 +37,11 @@ crct10dif_pclmul
 cryptd
 crypto_simd
 crypto_user
+des_generic
 dm_mod
 drm
 drm_kms_helper
+ecb
 ecc
 ecdh_generic
 ec_sys
@@ -85,6 +92,7 @@ libahci
 libarc4
 libata
 libcrc32c
+libdes
 libphy
 libps2
 lis3lv02d
@@ -93,6 +101,7 @@ mac80211
 mac_hid
 mbcache
 mc
+md4
 mdio_devres
 mei
 mei_hdcp
@@ -112,6 +121,7 @@ nls_iso8859_1
 nls_utf8
 overlay
 pcspkr
+pkcs8_key_parser
 processor_thermal_device
 processor_thermal_mbox
 processor_thermal_rapl
