@@ -34,6 +34,10 @@ XF86AudioMute
 super + shift + t
     ~/.local/bin/mytray
 
+# Run displayselect script
+super + shift + d
+    ~/.local/bin/displayselect
+
 # Launch pulsemixer
 super + a
     $TERMINAL -e pulsemixer
