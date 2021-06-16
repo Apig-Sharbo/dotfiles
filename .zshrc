@@ -88,11 +88,17 @@ setopt COMPLETE_ALIASES
 # Source Aliases from .aliasrc
 [ -f "${HOME}/.aliasrc" ] && source "${HOME}/.aliasrc"
 
+# Vi mode: make bash Alt+. work
+# bindkey -M viins '\e.' insert-last-word
+
+# Vi mode: make tab autocomplete menu cycle in reverse
+# bindkey -M viins '^[[Z' reverse-menu-complete
+
 # make bash Alt+. work
-bindkey -M viins '\e.' insert-last-word
+bindkey '\e.' insert-last-word
 
 # make tab autocomplete menu cycle in reverse
-bindkey -M viins '^[[Z' reverse-menu-complete
+bindkey '^[[Z' reverse-menu-complete
 
 # disable flowcontrol (ctrl+s stops terminal output, and ctrl+q resumes it)
 setopt noflowcontrol
