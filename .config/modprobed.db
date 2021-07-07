@@ -210,3 +210,5 @@ x_tables
 xt_addrtype
 xt_conntrack
 xt_MASQUERADE
+xt_nat
+xt_tcpudp
