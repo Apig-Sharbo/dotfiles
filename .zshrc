@@ -12,7 +12,7 @@
 
 zstyle ':completion:*' completer _complete _ignored
 zstyle ':completion:*' menu select
-zstyle :compinstall filename '/home/jargonin/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
