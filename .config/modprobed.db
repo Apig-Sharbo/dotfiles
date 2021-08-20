@@ -75,6 +75,7 @@ intel_powerclamp
 intel_rapl_common
 intel_rapl_msr
 intel_soc_dts_iosf
+intel_tcc_cooling
 intel_uncore
 iptable_filter
 iptable_nat
@@ -122,6 +123,7 @@ nls_utf8
 overlay
 pcspkr
 pkcs8_key_parser
+platform_profile
 processor_thermal_device
 processor_thermal_mbox
 processor_thermal_rapl
@@ -145,6 +147,7 @@ serio
 serio_raw
 snd
 snd_compress
+snd_ctl_led
 snd_hda_codec
 snd_hda_codec_generic
 snd_hda_codec_hdmi
