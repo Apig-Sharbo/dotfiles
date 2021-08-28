@@ -36,8 +36,10 @@ bindkey "^E" vi-end-of-line
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
-# Reverse search command history
-bindkey "^R" history-incremental-pattern-search-backward
+# Reverse search command history using existing text
+bindkey "^R" history-beginning-search-backward
+# Forward search command history using existing text
+bindkey "^F" history-beginning-search-forward
 
 # Enable colors and change prompt:
 # autoload -U colors && colors
