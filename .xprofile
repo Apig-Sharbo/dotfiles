@@ -6,4 +6,4 @@ dwmblocks &
 /* dunst & */
 sxhkd &
 /* touchpad & */
-/* xwallpaper --maximize ~/.config/wallpaper/sunsetRocket2.png */
+set-wallpaper
