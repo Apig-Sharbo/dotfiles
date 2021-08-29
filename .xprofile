@@ -6,4 +6,5 @@ dwmblocks &
 /* dunst & */
 sxhkd &
 /* touchpad & */
-set-wallpaper
+set-wallpaper &
+clipmenud &

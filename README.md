@@ -8,6 +8,7 @@ awesome  |  is a highly configurable, next generation framework window manager f
 brave-bin  |  is an elegant browser with built-in adblocking, tor and other features
 breath2-icon-themes  |  is KDE breath2 icon theme
 breeze-icons  |  is KDE Breeze icon themes
+clipmenu  |  is a clipboard management using dmenu
 cmus | is terminal music player
 dmenu |  runs commands and provides a UI for selection
 dunst           |  is a suckless notification system
