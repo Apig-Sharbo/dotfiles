@@ -146,8 +146,8 @@ autocmd BufWritePost ~/suckless-mine/slstatus/config.h !sudo make -C ~/suckless-
 autocmd BufWritePost ~/dwmblocks/blocks.h !sudo make -C ~/dwmblocks clean install
 " Compile slock
 autocmd BufWritePost ~/suckless-mine/slock/config.h !sudo make -C ~/suckless-mine/slock clean install
-" Compile LateX in the current directory of the terminal
-autocmd BufWritePost *.tex !pdflatex %
+" Compile LateX
+autocmd BufWritePost *.tex !cd "$(echo % | rev | cut -d'/' -f2- | rev)" && pdflatex %
 " Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
