@@ -146,8 +146,8 @@ autocmd BufWritePost ~/suckless-mine/slstatus/config.h !sudo make -C ~/suckless-
 autocmd BufWritePost ~/dwmblocks/blocks.h !sudo make -C ~/dwmblocks clean install
 " Compile slock
 autocmd BufWritePost ~/suckless-mine/slock/config.h !sudo make -C ~/suckless-mine/slock clean install
-" Compile LateX
-autocmd BufWritePost *.tex !cd "$(echo % | rev | cut -d'/' -f2- | rev)" && pdflatex %
+" Compile LateX. Directory name is taken by reading this documentation: http://vimdoc.sourceforge.net/htmldoc/cmdline.html#filename-modifiers
+autocmd BufWritePost *.tex !cd "%:p:h" && pdflatex %
 " Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
