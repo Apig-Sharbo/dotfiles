@@ -39,7 +39,7 @@ super + shift + d
     ~/.local/bin/displayselect
 
 # Launch pulsemixer
-super + a
+super + shift + a
     $TERMINAL -e pulsemixer
 
 # Screenshot
