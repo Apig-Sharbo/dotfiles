@@ -9,11 +9,12 @@ brave-bin  |  is an elegant browser with built-in adblocking, tor and other feat
 breath2-icon-themes  |  is KDE breath2 icon theme
 breeze-icons  |  is KDE Breeze icon themes
 clipmenu  |  is a clipboard management using dmenu
-cmus | is terminal music player
-dmenu |  runs commands and provides a UI for selection
+cmus  | is terminal music player
+dmenu  |  runs commands and provides a UI for selection
 dunst           |  is a suckless notification system
 dwm |  is suckless's window manager
 dwmblocks  |  serves as the modular status bar
+fd  |  a better find
 fzf  |  is a fuzzy finder tool
 j4-dmenu-desktop  |  is to find .desktop files and offer you a menu to start an application using dmenu
 lf-git          |  is an extensive terminal file manager that everyone likes
