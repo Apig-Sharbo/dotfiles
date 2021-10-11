@@ -40,6 +40,7 @@ ripgrep  |  is a better grep
 slock  |  is suckless's lockscreen
 slstatus  |  is suckless's status monitor
 st  |  is suckless's terminal emulator
+starship  |  is a shell prompt
 sxiv            |  is a minimalist image viewer
 ttf-joypixels  |  is an emoji font
 unar  |  extracts compressed files with multiple formats
@@ -57,3 +58,4 @@ zathura-pdf-mupdf  |  allows mupdf pdf compatibility in zathura
 zip  |  is a Compressor/archiver for creating and modifying zipfiles
 zsh-autosuggestions  |  provides autosuggestions for zsh
 zsh-syntax-highlighting  |  provides syntax highlighting for zsh
+zsh-theme-powerlevel10k  |  is a zsh prompt
