@@ -16,6 +16,7 @@ dwm |  is suckless's window manager
 dwmblocks  |  serves as the modular status bar
 fd  |  a better find
 fzf  |  is a fuzzy finder tool
+imv  | Image viewer for X11 and Wayland
 j4-dmenu-desktop  |  is to find .desktop files and offer you a menu to start an application using dmenu
 lf-git          |  is an extensive terminal file manager that everyone likes
 libnotify       |  allows desktop notifications
