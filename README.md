@@ -43,6 +43,7 @@ slstatus  |  is suckless's status monitor
 st  |  is suckless's terminal emulator
 starship  |  is a shell prompt
 sxiv            |  is a minimalist image viewer
+trayer  |  is a lightweight system tray
 ttf-joypixels  |  is an emoji font
 unar  |  extracts compressed files with multiple formats
 vkbasalt  |  is a Vulkan post processing layer to enhance the visual graphics of games
