@@ -21,13 +21,20 @@ alias fast-mirrors='sudo pacman-mirrors --fasttrack 5 && sudo pacman -Syyu'
 
 # alias docker-gcloud='docker run --rm -t -i --volumes-from gcloud-config -v ~/Documents/Docker/gcloud:/opt --name=my-gcloud google/cloud-sdk gcloud beta interactive'
 
-mpv-yt(){
+## Play youtube video using MPV with the desired resolution passed as argument
+mpv-yt() {
     case $1 in
-      hd)  w=1280 ;;
-      fhd) w=1920 ;;
-      2k)  w=2560 ;;
-      4k)  w=3840 ;;
-      8k)  w=7680 ;;
+        hd) w=1280 ;;
+        fhd) w=1920 ;;
+        2k) w=2560 ;;
+        4k) w=3840 ;;
+        8k) w=7680 ;;
     esac
-    prime-run mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2";
+    prime-run mpv --ytdl-format="bestvideo[width=?$w][fps<=?60]+bestaudio" "$2"
+}
+
+## To quickly match filename or file content by using the passed string as argument
+gkeep() {
+    command fd "$@"
+    command rg --smart-case "$@"
 }
