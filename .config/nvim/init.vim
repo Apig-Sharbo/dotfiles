@@ -40,6 +40,9 @@ filetype plugin indent on
 " Unmap Q: Ex-mode
 noremap Q <Nop>
 
+" Better yank, and works as expected like D and C do till the end of line.
+map Y yg_
+
 nnoremap <silent> <A-k> <Plug>(ale_previous_wrap)
 nnoremap <silent> <A-j> <Plug>(ale_next_wrap)
 
