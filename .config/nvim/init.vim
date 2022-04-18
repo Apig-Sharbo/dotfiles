@@ -154,6 +154,8 @@ autocmd BufWritePost *.tex !cd "%:p:h" && pdflatex %
 " Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 
+" Make sure text is unfolded for .keep files
+autocmd BufEnter *.keep normal zR
 
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType Vagrantfile setlocal ts=2 sts=2 sw=2 expandtab
