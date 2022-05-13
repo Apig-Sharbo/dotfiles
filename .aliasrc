@@ -38,3 +38,8 @@ gkeep() {
     command fd "$@"
     command rg --smart-case "$@"
 }
+
+## Terraform is too long to constantly type
+tf() {
+    command terraform "$@"
+}

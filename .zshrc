@@ -123,6 +123,7 @@ if [ -f "${HOME}/Downloads/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/Dow
 if [ -f "${HOME}/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
 
 # source <(kubectl completion zsh)
+# source <(helm completion zsh)
 
 # Lazy Loading kubectl completion
 # function kubectl() {
@@ -144,6 +145,9 @@ if (( $+commands[kubectl] )); then
 
     unset __KUBECTL_COMPLETION_FILE
 fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform tf
 
 # Load zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
