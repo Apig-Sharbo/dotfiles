@@ -2,6 +2,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} " markdown preview
+    Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' } " Integration with Google Keep
     Plug 'rbgrouleff/bclose.vim'    " Buffer delete
     " Plug 'preservim/nerdtree'       " Tree view Folders and Files
     " Plug 'ryanoasis/vim-devicons'   " Add icons to nerdtree
@@ -66,7 +67,7 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
 nnoremap <silent> <leader>o :Buffers<CR>
-nnoremap <C-f> :RG<Space>
+nnoremap <C-f> :RG<CR>
 
 " Shortcutting split navigation
 noremap <C-h> <C-w>h
@@ -101,18 +102,27 @@ let g:terraform_fmt_on_save=1
 
 " set omnifunc=ale#completion#OmniFunc
 let g:ale_fix_on_save = 1
+
+" Note: Commented out stuff are here, since json doesn't support comments
+" yaml: ['yamlfix']
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'python': ['black'],
 \   'terraform': ['terraform'],
-\   'javascript' : ['eslint']
 \}
 
 let g:ale_linters = {
 \   'python': ['flake8'],
 \   'latex':['texlab'],
 \   'terraform': ['tflint'],
+\   'javascript' : ['eslint'],
+\   'yaml' : ['yamllint'],
 \}
+
+" run github actions linter only on github files
+ au BufRead,BufNewFile */.github/*/*.y{,a}ml
+                                \ let b:ale_linters = {'yaml': ['actionlint']}
+
 
 call deoplete#custom#source('ale', 'rank', 999)
 
