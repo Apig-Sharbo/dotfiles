@@ -12,13 +12,18 @@ local servers = {
   -- 'tflint',
   'bashls',
   'yamlls',
-  'sumneko_lua',
+  -- 'sumneko_lua',
 }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
     capabilities = capabilities,
+    -- settings = {
+    --   Lua = {
+    --     diagnostics = { globals = { 'vim' } }
+    --   }
+    -- },
   }
 end
 
