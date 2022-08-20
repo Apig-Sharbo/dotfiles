@@ -12,7 +12,7 @@ vim.opt.cursorline = true
 
 vim.opt.breakindent = true
 
-vim.cmd[[
+vim.cmd [[
   " Disable stupid backup and swap files - they trigger too many events
   " for file system watchers
       set nobackup

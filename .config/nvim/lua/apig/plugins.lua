@@ -21,14 +21,14 @@ packer.startup(function(use)
   use 'tpope/vim-commentary'
 
   -- Vim motion highlighting
-  use {'unblevable/quick-scope', disable = false}
+  use { 'unblevable/quick-scope', disable = false }
 
   -- CSS colors highlight
-  use {'rrethy/vim-hexokinase', run = 'make hexokinase'}
+  use { 'rrethy/vim-hexokinase', run = 'make hexokinase' }
 
   use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
   })
 
 end)

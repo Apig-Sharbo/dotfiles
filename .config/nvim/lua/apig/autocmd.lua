@@ -1,4 +1,4 @@
-vim.cmd[[
+vim.cmd [[
   " Compile LateX. Directory name is taken by reading this documentation: http://vimdoc.sourceforge.net/htmldoc/cmdline.html#filename-modifiers
   autocmd BufWritePost *.tex !cd "%:p:h" && pdflatex %
 
