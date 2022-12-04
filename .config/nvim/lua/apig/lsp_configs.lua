@@ -1,6 +1,7 @@
 -- Enabled lsp servers
 require 'lspconfig'.yamlls.setup {}
 require 'lspconfig'.tsserver.setup {}
+require 'lspconfig'.pylsp.setup {}
 -- require'lspconfig'.terraform_lsp.setup{}
 -- require'lspconfig'.tflint.setup{}
 require 'lspconfig'.terraformls.setup {}
@@ -62,6 +63,6 @@ vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
 vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
 vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
-vim.keymap.set('v', '<space>f', vim.lsp.buf.range_formatting, bufopts)
+vim.keymap.set({ 'n', 'v' }, '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts) -- TODO: Fix visual selection range format. It should detect range automatically if mode is visual, but it's not working for some reason.
+-- vim.keymap.set('v', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 -- end
