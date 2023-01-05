@@ -114,8 +114,8 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_HOME",
       "KC_PGUP",
+      "KC_PGDN",
       "KC_NO",
       "KC_NO",
       "KC_TRNS",
@@ -127,8 +127,8 @@
       "MAGIC_TOGGLE_NKRO",
       "KC_TRNS",
       "KC_TRNS",
+      "KC_HOME",
       "KC_END",
-      "KC_PGDN",
       "KC_VOLU",
       "KC_NO",
       "KC_MUTE",
@@ -247,7 +247,7 @@
       "KC_P9",
       "KC_TRNS",
       "KC_TRNS",
-      "TO(0)",
+      "QK_TO",
       "KC_TRNS",
       "KC_P4",
       "KC_P5",
@@ -291,5 +291,6 @@
       "KC_NO",
       "KC_TRNS"
     ]
-  ]
+  ],
+  "encoders": []
 }
